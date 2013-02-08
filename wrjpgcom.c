@@ -446,6 +446,8 @@ main (int argc, char **argv)
     } else if (keymatch(arg, "comment", 1)) {
       if (++argn >= argc) usage();
       comment_arg = argv[argn];
+#if 0
+#error "There is a buffer overflow in the code below"
       /* If the comment text starts with '"', then we are probably running
        * under MS-DOG and must parse out the quoted string ourselves.  Sigh.
        */
@@ -466,6 +468,7 @@ main (int argc, char **argv)
 	  strcat(comment_arg, argv[argn]);
 	}
       }
+#endif
       comment_length = (unsigned int) strlen(comment_arg);
     } else
       usage();
