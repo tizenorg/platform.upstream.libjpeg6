@@ -1,0 +1,9 @@
+* Fri Feb 08 2013 Patrick McCarty <patrick.mccarty@linux.intel.com> upstream/6b@beb9ab4
+- Add packaging
+- Apply updated config.guess and config.sub
+- Add a configure.ac
+- apply buffer overflow patch
+- makefile.cfg: ensure CFLAGS are passed to libtool and ld
+- jpeglib.h: use C linkage
+- Imported Upstream version 6b
+
