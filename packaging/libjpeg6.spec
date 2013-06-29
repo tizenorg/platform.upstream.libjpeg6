@@ -6,6 +6,7 @@ Summary:        A library for manipulating JPEG image format files
 URL:            http://www.ijg.org/
 Group:          System/Libraries
 Source:         jpegsrc.v%{version}.tar.gz
+Source1001: 	libjpeg6.manifest
 BuildRequires:  autoconf
 BuildRequires:  libtool
 
@@ -38,6 +39,7 @@ package installed.
 
 %prep
 %setup -q -n jpeg-%{version}
+cp %{SOURCE1001} .
 
 # libjpeg 6b includes a horribly obsolete version of libtool.
 # Blow it away and replace with build system's version.
@@ -73,9 +75,11 @@ rm -f %{buildroot}%{_libdir}/libjpeg.la
 %docs_package
 
 %files
+%manifest %{name}.manifest
 %{_libdir}/libjpeg.so.*
 
 %files devel
+%manifest %{name}.manifest
 %{_bindir}/*
 %{_includedir}/*.h
 %{_libdir}/*.so
