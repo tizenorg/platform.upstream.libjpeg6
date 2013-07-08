@@ -1,0 +1,8 @@
+Change-Id: Ic24fd1478fcb5dc13fda8400dbf50a52e009db94
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:39:23 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4906
+Project: platform/upstream/libjpeg6
+Branch: refs/heads/tizen
